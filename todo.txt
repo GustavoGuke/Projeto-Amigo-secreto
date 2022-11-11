@@ -1,0 +1,87 @@
+[*] Requisição post:jogo
+recebe do body um objeto com informações do grupo do amigo secreto:
+    id: uuidv4(),
+        sorteio: false,
+        nameGroup,
+        adm,
+        deadline: new Date(deadline),
+        description,
+        secret: [],
+        participantes: null
+    }
+utilizar lib uuid para criar id unico
+sorteio virá false, após o sorteio ser realizado deverá trocar para true
+nome do grupo para passar pelo headers em autenticações
+adm pessoa administradora do grupo, sera requisitada para fazer alteções e deletar a brincadeira
+deadline quando o jogo sera realizado
+description valores de quanto gastar, etc
+secret é uma lista com os participantes do jogo
+participantes recebe um lista do sorteio e guarda as informações
+retorna um json com as informações do objeto menos as listas
+
+post jogo
+criar jogo em objeto
+id
+adm do grupo
+nome do grupo
+data do jogo
+descrição
+array: nome e sobrenome do participantes, id
+
+
+get jogo
+mostrar os participantes
+
+
+post 
+colocar participantes
+id
+nome
+sobrenome
+fazer o sorteio
+sendo que a pessoa nao pode pegar ela mesma
+
+get participantes
+mostrar o sorteio por id de cada usuário
+
+update jogo buscar por id
+adm do grupo
+nome do grupo
+data do jogo
+
+update participantes buscar por id
+nome e sobrenome
+
+delete jogo
+deletar o jogo por id
+
+deletar participantes 
+deletar participantes pod id 
+
+
+
+{
+	"name":"jura",
+	"lastName":"freitas",
+	"login":"jura"
+}
+{
+	"name":"gustavo",
+	"lastName":"lima",
+	"login":"gu"
+}
+{
+	"name":"kerolin",
+	"lastName":"lima",
+	"login":"kel"
+}
+{
+	"name":"jessica",
+	"lastName":"freitas",
+	"login":"je"
+}
+{
+	"name":"cida",
+	"lastName":"freitas",
+	"login":"cida"
+}
